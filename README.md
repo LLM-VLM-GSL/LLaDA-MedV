@@ -28,7 +28,7 @@ We are currently finalizing the training code and will release it very soon.
 We are currently finalizing the evaluation code and will release it very soon.
 
 ### Weight 
-We release our model weights to support future research in the community. Specifically, [LLaDAMedV-2A4E](https://drive.google.com/drive/u/1/folders/1HwW4l-r9H3uyVPpysndP6ZOJXIQfkVB9) refers to our main model after semantic alignment and supervised fine-tuning (SFT). [VQA_RAD_2E](https://drive.google.com/drive/u/1/folders/1HwW4l-r9H3uyVPpysndP6ZOJXIQfkVB9), [SLAKE_10E](https://drive.google.com/drive/u/1/folders/1HwW4l-r9H3uyVPpysndP6ZOJXIQfkVB9) and [PathVQA_7E](https://drive.google.com/drive/u/1/folders/1HwW4l-r9H3uyVPpysndP6ZOJXIQfkVB9) refer to dataset-specific models after task-specific fine-tuning. For more details, please refer to our manuscript.
+We release our model weights to support future research in the community. Specifically, [LLaDAMedV-2A4E](https://drive.google.com/drive/u/1/folders/1HwW4l-r9H3uyVPpysndP6ZOJXIQfkVB9) refers to our main model. [VQA_RAD_2E](https://drive.google.com/drive/u/1/folders/1HwW4l-r9H3uyVPpysndP6ZOJXIQfkVB9), [SLAKE_10E](https://drive.google.com/drive/u/1/folders/1HwW4l-r9H3uyVPpysndP6ZOJXIQfkVB9) and [PathVQA_7E](https://drive.google.com/drive/u/1/folders/1HwW4l-r9H3uyVPpysndP6ZOJXIQfkVB9) refer to dataset-specific models after task-specific fine-tuning. Additionally, model weight can be accessed directly via our [Hugging Face repository](https://huggingface.co/XZDong123/LLaDA-MedV). For more details, please refer to our manuscript.
 
 ### Acknowledgements
 We gratefully acknowledge the authors of the following open-source repositories, which served as valuable references during our implementation:
