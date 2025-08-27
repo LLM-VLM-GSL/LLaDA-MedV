@@ -39,3 +39,13 @@ We gratefully acknowledge the authors of the following open-source repositories,
 
 We deeply appreciate their contributions to the research community.
 
+### Cite Us
+If you find our work useful in your research, please cite our works:
+```bibtex
+@article{dong2025llada,
+  title={LLaDA-MedV: Exploring Large Language Diffusion Models for Biomedical Image Understanding},
+  author={Dong, Xuanzhao and Zhu, Wenhui and Chen, Xiwen and Wang, Zhipeng and Qiu, Peijie and Tang, Shao and Li, Xin and Wang, Yalin},
+  journal={arXiv preprint arXiv:2508.01617},
+  year={2025}
+}```
+
