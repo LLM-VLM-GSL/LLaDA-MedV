@@ -1,19 +1,9 @@
 <h1 align="center">LLaDA-MedV: Exploring Large Language Diffusion Models for Biomedical Image Understanding</h1>
 
-<p align="center">
-  <a href="https://huggingface.co/XZDong123/LLaDA-MedV">
-    <img src="https://img.shields.io/badge/HuggingFace-Model-orange" alt="Model">
-  </a>
-  <a href="https://github.com/LLM-VLM-GSL/LLaDA-MedV">
-    <img src="https://img.shields.io/badge/GitHub-Code-black" alt="Code">
-  </a>
-  <a href="https://arxiv.org/abs/2508.01617v1">
-    <img src="https://img.shields.io/badge/arXiv-2508.01617-b31b1b" alt="Paper">
-  </a>
-  <a href="ASU%20Non-Commercial%20License">
-    <img src="https://img.shields.io/badge/License-Non--Commercial-blue" alt="License">
-  </a>
-</p>
+[![Code](https://img.shields.io/badge/GitHub-Code-black)](https://github.com/LLM-VLM-GSL/LLaDA-MedV)
+[![Paper](https://img.shields.io/badge/arXiv-2508.01617-b31b1b)](https://arxiv.org/abs/2508.01617v1)
+[![Model](https://img.shields.io/badge/HuggingFace-Model-orange)](https://huggingface.co/XZDong123/LLaDA-MedV)
+[![License](https://img.shields.io/badge/License-Non--Commercial-blue)](ASU%20Non-Commercial%20License)
 
 ## 📰 News
 - [2026-06] LLaDA-MedV has been accepted to **CVPR 2026**.
@@ -71,19 +61,21 @@ We also evaluate LLaDA-MedV on three biomedical visual question answering benchm
 
 ## ⚙️ Model Details
 ### Training
-We are currently finalizing the training code and will release it soon.
+Please refer to the training implementation of [LLaDA-V](https://github.com/ML-GSAI/LLaDA-V).
 
 ### Evaluation
-We are currently finalizing the evaluation code and will release it soon.
+Please refer to our GPT-based evaluation helper in [`eval_vlm_chat_gpt_score.py`](/Users/xenos/Desktop/git_proj/LLaDA-MedV/eval_vlm_chat_gpt_score.py). For more detailed evaluation protocols, please refer to [LLaVA-Med evaluation](https://github.com/microsoft/LLaVA-Med/tree/v1.0.0).
 
 ### Weights
 We release our model weights to support future research in the community.
 
-- [LLaDAMedV-2A4E](https://drive.google.com/drive/u/1/folders/1HwW4l-r9H3uyVPpysndP6ZOJXIQfkVB9): main model
-- [VQA_RAD_2E](https://drive.google.com/drive/u/1/folders/1HwW4l-r9H3uyVPpysndP6ZOJXIQfkVB9): VQA-RAD fine-tuned model
-- [SLAKE_10E](https://drive.google.com/drive/u/1/folders/1HwW4l-r9H3uyVPpysndP6ZOJXIQfkVB9): SLAKE fine-tuned model
-- [PathVQA_7E](https://drive.google.com/drive/u/1/folders/1HwW4l-r9H3uyVPpysndP6ZOJXIQfkVB9): PathVQA fine-tuned model
-- [Hugging Face repository](https://huggingface.co/XZDong123/LLaDA-MedV): model access and hosting
+| 🧩 Model | 📝 Description | 🔗 Link |
+| --- | --- | --- |
+| `LLaDAMedV-2A4E` | ⭐ Main model | [Google Drive](https://drive.google.com/drive/u/1/folders/1HwW4l-r9H3uyVPpysndP6ZOJXIQfkVB9) |
+| `VQA_RAD_2E` | 🩺 VQA-RAD fine-tuned model | [Google Drive](https://drive.google.com/drive/u/1/folders/1HwW4l-r9H3uyVPpysndP6ZOJXIQfkVB9) |
+| `SLAKE_10E` | 🧪 SLAKE fine-tuned model | [Google Drive](https://drive.google.com/drive/u/1/folders/1HwW4l-r9H3uyVPpysndP6ZOJXIQfkVB9) |
+| `PathVQA_7E` | 🔬 PathVQA fine-tuned model | [Google Drive](https://drive.google.com/drive/u/1/folders/1HwW4l-r9H3uyVPpysndP6ZOJXIQfkVB9) |
+| `XZDong123/LLaDA-MedV` | 🤗 Hugging Face repository | [Hugging Face](https://huggingface.co/XZDong123/LLaDA-MedV) |
 
 ## 🚀 Quick Start
 The most direct runnable entry point in this repository is `test_lladamedv_vqa.py`, which provides a single-image biomedical VQA demo.
