@@ -1,17 +1,17 @@
 <h1 align="center">LLaDA-MedV: Exploring Large Language Diffusion Models for Biomedical Image Understanding</h1>
 
 <p align="center">
-  <a href="https://arxiv.org/abs/2508.01617v1">
-    <img src="https://img.shields.io/badge/Paper-arXiv-b31b1b?style=for-the-badge&logo=arxiv&logoColor=white" alt="Paper">
-  </a>
   <a href="https://huggingface.co/XZDong123/LLaDA-MedV">
-    <img src="https://img.shields.io/badge/Model-Hugging%20Face-fcd022?style=for-the-badge&logo=huggingface&logoColor=black" alt="Hugging Face">
+    <img src="https://img.shields.io/badge/HuggingFace-Model-orange" alt="Model">
   </a>
   <a href="https://github.com/LLM-VLM-GSL/LLaDA-MedV">
-    <img src="https://img.shields.io/badge/Code-GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+    <img src="https://img.shields.io/badge/GitHub-Code-black" alt="Code">
+  </a>
+  <a href="https://arxiv.org/abs/2508.01617v1">
+    <img src="https://img.shields.io/badge/arXiv-2508.01617-b31b1b" alt="Paper">
   </a>
   <a href="ASU%20Non-Commercial%20License">
-    <img src="https://img.shields.io/badge/License-Non--Commercial-blue?style=for-the-badge" alt="License">
+    <img src="https://img.shields.io/badge/License-Non--Commercial-blue" alt="License">
   </a>
 </p>
 
