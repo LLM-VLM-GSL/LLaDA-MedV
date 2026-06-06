@@ -1,36 +1,109 @@
-# LLaDA-MedV: Exploring Large Language Diffusion Models for Biomedical Image Understanding
+<h1 align="center">LLaDA-MedV: Exploring Large Language Diffusion Models for Biomedical Image Understanding</h1>
 
-## New
-- [2025-08-06] We have upload our paper to [arxiv](https://arxiv.org/abs/2508.01617v1) and release model weight.
+<p align="center">
+  <a href="https://arxiv.org/abs/2508.01617v1">
+    <img src="https://img.shields.io/badge/Paper-arXiv-b31b1b?style=for-the-badge&logo=arxiv&logoColor=white" alt="Paper">
+  </a>
+  <a href="https://huggingface.co/XZDong123/LLaDA-MedV">
+    <img src="https://img.shields.io/badge/Model-Hugging%20Face-fcd022?style=for-the-badge&logo=huggingface&logoColor=black" alt="Hugging Face">
+  </a>
+  <a href="https://github.com/LLM-VLM-GSL/LLaDA-MedV">
+    <img src="https://img.shields.io/badge/Code-GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+  </a>
+  <a href="ASU%20Non-Commercial%20License">
+    <img src="https://img.shields.io/badge/License-Non--Commercial-blue?style=for-the-badge" alt="License">
+  </a>
+</p>
 
-## Introduction
-Autoregressive models (ARMs) have long dominated the landscape of biomedical vision-language models (VLMs). Recently, masked diffusion models such as LLaDA have emerged as promising alternatives, yet their application in the biomedical domain remains largely underexplored. To bridge this gap, we introduce **LLaDA-MedV**, the first large language diffusion model tailored for biomedical image understanding through vision instruction tuning. LLaDA-MedV achieves relative performance gains of 7.855\% over LLaVA-Med and 1.867\% over LLaDA-V in the open-ended biomedical visual conversation task, and sets new state-of-the-art accuracy on the closed-form subset of three VQA benchmarks: 84.93\% on VQA-RAD, 92.31\% on SLAKE, and 95.15\% on PathVQA. Furthermore, a detailed comparison with LLaVA-Med suggests that LLaDA-MedV is capable of generating reasonably longer responses by explicitly controlling response length, which can lead to more informative outputs. We also conduct an in-depth analysis of both the training and inference stages, highlighting the critical roles of initialization weight selection, fine-tuning strategies, and the interplay between sampling steps and response repetition.
+## 📰 News
+- [2026-06] LLaDA-MedV has been accepted to **CVPR 2026**.
+- [2025-08-06] We uploaded our paper to [arXiv](https://arxiv.org/abs/2508.01617v1) and released model weights.
 
-## Model Performance
-### Open-end Biomedical conversation
-We adopt the [Biomedical Visual Chatbot benchmark](https://arxiv.org/abs/2306.00890) to evaluate the performance of LLaDA-MedV in a realistic open-ended conversation setting. As shown below, LLaDA-MedV demonstrates superior performance compared to several baselines. We provide detailed generation results for improved visualization.
+## 🧠 Introduction
+Autoregressive models (ARMs) have long dominated the landscape of biomedical vision-language models (VLMs). Recently, masked diffusion models such as LLaDA have emerged as promising alternatives, yet their application in the biomedical domain remains largely underexplored. To bridge this gap, we introduce **LLaDA-MedV**, the first large language diffusion model tailored for biomedical image understanding through vision instruction tuning.
+
+LLaDA-MedV achieves relative performance gains of 7.855% over LLaVA-Med and 1.867% over LLaDA-V in the open-ended biomedical visual conversation task, and sets new state-of-the-art accuracy on the closed-form subset of three VQA benchmarks: 84.93% on VQA-RAD, 92.31% on SLAKE, and 95.15% on PathVQA. We further analyze both training and inference behaviors, highlighting the importance of initialization weight selection, fine-tuning strategies, and the interplay between sampling steps and response repetition.
+
+## ✨ Highlights
+- **Biomedical diffusion VLM**: LLaDA-MedV explores large language diffusion models for biomedical image understanding instead of the more common autoregressive paradigm.
+- **Strong open-ended chat performance**: The model improves biomedical visual conversation quality over LLaVA-Med and LLaDA-V.
+- **Strong downstream VQA results**: LLaDA-MedV achieves strong performance on VQA-RAD, SLAKE, and PathVQA after task-specific fine-tuning.
+- **Controllable long-form responses**: The model can generate longer answers when response length is explicitly controlled, improving informativeness in biomedical dialogue.
+
+## 🗂️ Repository Overview
+This repository currently contains:
+
+- the core multimodal model implementation under `llava/`
+- LLaDA-based biomedical vision-language model extensions
+- a single-image VQA inference demo in `test_lladamedv_vqa.py`
+- evaluation helpers such as `eval_vlm_chat_gpt_score.py` and `openai_api.py`
+- result figures and tables used in the paper
+
+The current repository is strongest on **model/inference code and result presentation**. The README in its current form indicates that the full training and evaluation release is still being finalized.
+
+## 🏗️ Repository Structure
+```text
+LLaDA-MedV/
+├── llava/                         # Core multimodal model, serving, and training code
+├── images/                        # Figures used in the README and paper presentation
+├── test_lladamedv_vqa.py          # Single-image biomedical VQA demo
+├── eval_vlm_chat_gpt_score.py     # GPT-based evaluation helper
+├── openai_api.py                  # Async OpenAI API wrapper for evaluation
+├── ASU Non-Commercial License
+└── README.md
+```
+
+## 📊 Model Performance
+### Open-End Biomedical Conversation
+We adopt the [Biomedical Visual Chatbot benchmark](https://arxiv.org/abs/2306.00890) to evaluate LLaDA-MedV in a realistic open-ended biomedical conversation setting. As shown below, LLaDA-MedV demonstrates superior performance compared to several baselines, and we provide qualitative generation results for visualization.
+
 <table>
   <tr>
-    <td><img src="https://github.com/LLM-VLM-GSL/LLaDA-MedV/blob/main/images/fig-radarmedicalnew.png" width="500"/></td>
-    <td><img src="https://github.com/LLM-VLM-GSL/LLaDA-MedV/blob/main/images/bio-conversation.png" width="500"/></td>
+    <td><img src="https://github.com/LLM-VLM-GSL/LLaDA-MedV/blob/main/images/fig-radarmedicalnew.png" width="500" alt="Radar performance figure"/></td>
+    <td><img src="https://github.com/LLM-VLM-GSL/LLaDA-MedV/blob/main/images/bio-conversation.png" width="500" alt="Biomedical conversation example"/></td>
   </tr>
 </table>
 
 ### Downstream Biomedical VQA
-We also evaluate model performance on three biomedical visual question answering (VQA) benchmarks after fine-tuning on the training sets of [VQA-RAD](https://pubmed.ncbi.nlm.nih.gov/30457565/), [SLAKE](https://arxiv.org/abs/2102.09542) and [PathVQA](https://arxiv.org/abs/2003.10286), following their official splits. The results are reported below.
+We also evaluate LLaDA-MedV on three biomedical visual question answering benchmarks after fine-tuning on the training sets of [VQA-RAD](https://pubmed.ncbi.nlm.nih.gov/30457565/), [SLAKE](https://arxiv.org/abs/2102.09542), and [PathVQA](https://arxiv.org/abs/2003.10286), following their official splits.
+
 ![Results](https://github.com/LLM-VLM-GSL/LLaDA-MedV/blob/main/images/table.png)
 
-## Model Details
+## ⚙️ Model Details
 ### Training
-We are currently finalizing the training code and will release it very soon.
+We are currently finalizing the training code and will release it soon.
 
-### Evaluation 
-We are currently finalizing the evaluation code and will release it very soon.
+### Evaluation
+We are currently finalizing the evaluation code and will release it soon.
 
-### Weight 
-We release our model weights to support future research in the community. Specifically, [LLaDAMedV-2A4E](https://drive.google.com/drive/u/1/folders/1HwW4l-r9H3uyVPpysndP6ZOJXIQfkVB9) refers to our main model. [VQA_RAD_2E](https://drive.google.com/drive/u/1/folders/1HwW4l-r9H3uyVPpysndP6ZOJXIQfkVB9), [SLAKE_10E](https://drive.google.com/drive/u/1/folders/1HwW4l-r9H3uyVPpysndP6ZOJXIQfkVB9) and [PathVQA_7E](https://drive.google.com/drive/u/1/folders/1HwW4l-r9H3uyVPpysndP6ZOJXIQfkVB9) refer to dataset-specific models after task-specific fine-tuning. Additionally, model weight can be accessed directly via our [Hugging Face repository](https://huggingface.co/XZDong123/LLaDA-MedV). For more details, please refer to our manuscript.
+### Weights
+We release our model weights to support future research in the community.
 
-### Acknowledgements
+- [LLaDAMedV-2A4E](https://drive.google.com/drive/u/1/folders/1HwW4l-r9H3uyVPpysndP6ZOJXIQfkVB9): main model
+- [VQA_RAD_2E](https://drive.google.com/drive/u/1/folders/1HwW4l-r9H3uyVPpysndP6ZOJXIQfkVB9): VQA-RAD fine-tuned model
+- [SLAKE_10E](https://drive.google.com/drive/u/1/folders/1HwW4l-r9H3uyVPpysndP6ZOJXIQfkVB9): SLAKE fine-tuned model
+- [PathVQA_7E](https://drive.google.com/drive/u/1/folders/1HwW4l-r9H3uyVPpysndP6ZOJXIQfkVB9): PathVQA fine-tuned model
+- [Hugging Face repository](https://huggingface.co/XZDong123/LLaDA-MedV): model access and hosting
+
+## 🚀 Quick Start
+The most direct runnable entry point in this repository is `test_lladamedv_vqa.py`, which provides a single-image biomedical VQA demo.
+
+```bash
+python test_lladamedv_vqa.py \
+  --image /path/to/your/image.png \
+  --question "Please describe this biomedical image in detail." \
+  --model-path XZDong123/LLaDA-MedV \
+  --llada-v-codebase /path/to/LLaDA-V
+```
+
+Notes:
+
+- `--llada-v-codebase` is required so the script can import the `llava` codebase correctly, and it can point to this repository root.
+- The default vision tower is `google/siglip2-so400m-patch14-384`.
+- The default model path is `XZDong123/LLaDA-MedV`.
+- CUDA is expected for typical use.
+
+## 🙏 Acknowledgements
 We gratefully acknowledge the authors of the following open-source repositories, which served as valuable references during our implementation:
 
 - [LLaDA](https://github.com/ML-GSAI/LLaDA)
@@ -39,13 +112,14 @@ We gratefully acknowledge the authors of the following open-source repositories,
 
 We deeply appreciate their contributions to the research community.
 
-### Cite Us
-If you find our work useful in your research, please cite our works:
+## 📚 Citation
+If you find our work useful in your research, please cite:
+
 ```bibtex
 @article{dong2025llada,
   title={LLaDA-MedV: Exploring Large Language Diffusion Models for Biomedical Image Understanding},
   author={Dong, Xuanzhao and Zhu, Wenhui and Chen, Xiwen and Wang, Zhipeng and Qiu, Peijie and Tang, Shao and Li, Xin and Wang, Yalin},
   journal={arXiv preprint arXiv:2508.01617},
   year={2025}
-}```
-
+}
+```
