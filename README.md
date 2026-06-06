@@ -71,10 +71,10 @@ We release our model weights to support future research in the community.
 
 | 🧩 Model | 📝 Description | 🔗 Link |
 | --- | --- | --- |
-| `LLaDAMedV-2A4E` | ⭐ Main model | [Google Drive](https://drive.google.com/drive/u/1/folders/1HwW4l-r9H3uyVPpysndP6ZOJXIQfkVB9) |
-| `VQA_RAD_2E` | 🩺 VQA-RAD fine-tuned model | [Google Drive](https://drive.google.com/drive/u/1/folders/1HwW4l-r9H3uyVPpysndP6ZOJXIQfkVB9) |
-| `SLAKE_10E` | 🧪 SLAKE fine-tuned model | [Google Drive](https://drive.google.com/drive/u/1/folders/1HwW4l-r9H3uyVPpysndP6ZOJXIQfkVB9) |
-| `PathVQA_7E` | 🔬 PathVQA fine-tuned model | [Google Drive](https://drive.google.com/drive/u/1/folders/1HwW4l-r9H3uyVPpysndP6ZOJXIQfkVB9) |
+| `LLaDAMedV-2A4E` | Main model | [Google Drive](https://drive.google.com/drive/u/1/folders/1HwW4l-r9H3uyVPpysndP6ZOJXIQfkVB9) |
+| `VQA_RAD_2E` | VQA-RAD fine-tuned model | [Google Drive](https://drive.google.com/drive/u/1/folders/1HwW4l-r9H3uyVPpysndP6ZOJXIQfkVB9) |
+| `SLAKE_10E` | SLAKE fine-tuned model | [Google Drive](https://drive.google.com/drive/u/1/folders/1HwW4l-r9H3uyVPpysndP6ZOJXIQfkVB9) |
+| `PathVQA_7E` | PathVQA fine-tuned model | [Google Drive](https://drive.google.com/drive/u/1/folders/1HwW4l-r9H3uyVPpysndP6ZOJXIQfkVB9) |
 | `XZDong123/LLaDA-MedV` | 🤗 Hugging Face repository | [Hugging Face](https://huggingface.co/XZDong123/LLaDA-MedV) |
 
 ## 🚀 Quick Start
